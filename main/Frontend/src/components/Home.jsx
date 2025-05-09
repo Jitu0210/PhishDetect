@@ -1,35 +1,42 @@
-import { useState } from 'react';
-import axios from 'axios';
+import "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+// import { useEffect } from "react";
+import axios from "axios"
+import { useState } from "react";
 
-const LinkForm = () => {
-    const [link, setLink] = useState('');
 
-    const handleSubmit = async (e) => {
-        e.preventDefault(); // Prevent page reload
+const Home = () => {
+
+    const [link, setLink] = useState("");
+   
+    const handleLink = async (e) => {
+        e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3001/check-link', { link });
-            console.log(response.data.message); // Log success message
+          const response = await axios.post("http://localhost:8000/api/v1/link/check-link", {
+            url: link, 
+          });
+          console.log("Response:", response.data);
         } catch (error) {
-            console.error('Error submitting link:', error);
+          console.error("Error:", error.response?.data || error.message);
         }
-    };
+      };
+   
+  
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="link">Enter a Link:</label>
-                <input
-                    type="url"
-                    id="link"
-                    name="link"
-                    value={link}
-                    onChange={(e) => setLink(e.target.value)} // Update state on input change
-                    required
-                />
-            </div>
-            <button type="submit">Submit</button>
+  return (
+    <div>
+      <Navbar />
+      <div className="flex items-center justify-center bg-gray-200 p-6 mt-4 mx-6 rounded-md">
+        <form action="/check-link" method="POST">
+          <input   value={link}
+            onChange={(e) => setLink(e.target.value)} type="text" placeholder="Enter your link here..." className="rounded-md border border-black p-2 "/>
+          <button onSubmit={handleLink} className="bg-black rounded-md ml-5 p-2 text-white">Check</button>
         </form>
-    );
+      </div>
+      <Footer />
+    </div>
+  );
 };
 
-export default LinkForm;
+export default Home;

@@ -14,7 +14,6 @@ connectDB();
 
 const PORT = process.env.PORT || 8000;
 
-// Importing routes
 import linkroutes from "./routes/linkroutes.js";
 import userroutes from "./routes/userroutes.js";
 
