@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div className='bg-blue-500 text-white p-4 flex justify-between'>
+    <div className='bg-black text-white p-4 flex justify-between'>
       <h1 className=''>PhishDetect</h1>
       <div className='flex space-x-4'>
         
