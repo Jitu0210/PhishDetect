@@ -31,7 +31,7 @@ const Home = () => {
         <form action="/check-link" method="POST">
           <input   value={link}
             onChange={(e) => setLink(e.target.value)} type="text" placeholder="Enter your link here..." className="rounded-md border border-black p-2 "/>
-          <button onSubmit={handleLink} className="bg-black rounded-md ml-5 p-2 text-white">Check</button>
+          <button onClick={handleLink} className="bg-black rounded-md ml-5 p-2 text-white">Check</button>
         </form>
       </div>
       <Footer />
