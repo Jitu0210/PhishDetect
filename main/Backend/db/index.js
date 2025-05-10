@@ -12,7 +12,7 @@ const connectDB = async () => {
         useUnifiedTopology: true,
       })
       .then(() => {
-        console.log("MongoDB connection successful...");
+        console.log("Connected with mongodb Atlas successfully...");
       });
   } catch (error) {
     console.log(error);

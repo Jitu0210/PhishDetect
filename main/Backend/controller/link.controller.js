@@ -16,8 +16,7 @@ const checkUrl = async (req, res) => {
         .status(200)
         .json({ url, result: link.result, checkedAt: link.checkedAt })
     }
-
-    
+   
     const analyzedResult = "Analysis result from ML model"; //  ml logic willl be here
 
     link = new Link({ url, result: analyzedResult, checkedAt: new Date() })
