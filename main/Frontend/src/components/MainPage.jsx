@@ -13,7 +13,7 @@ const MainPage = () => {
     e.preventDefault()
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/v1/link/check-link",
+        "https://phishdetectbackend-1.onrender.com/api/v1/link/check-link",
         {
           url: link,
         }
