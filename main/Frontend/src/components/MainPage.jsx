@@ -30,7 +30,7 @@ const MainPage = () => {
 
       <div className="flex-grow flex items-center justify-center p-10 bg-gradient-to-r from-[#1A3A5F] to-[#06274C]">
         <div className="bg-[#0A1C34] p-12 rounded-xl shadow-2xl w-full max-w-2xl">
-          <h2 className="text-4xl font-bold text-center text-white mb-8">
+          <h2 className="flex items-center justify-center md:text-4xl text-3xl font-bold text-center text-white mb-8">
             Cybersecurity Link Validation
           </h2>
           <p className="text-lg text-center text-gray-300 mb-8">
