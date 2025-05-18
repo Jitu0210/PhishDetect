@@ -51,7 +51,7 @@ const MainPage = () => {
             <div>
               <button
                 type="submit"
-                //  onClick={()=>navigate("/linkresult")}
+                 onClick={()=>navigate("/linkresult")}
                 className="w-full py-3 px-4 bg-blue-700 text-white rounded-md shadow-lg hover:bg-blue-600 transition duration-300"
               >
                 Check Link
